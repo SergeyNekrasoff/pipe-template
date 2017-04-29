@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic);
+
+*, *:after, *:before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+body {
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 1px;
+  background: #c4c4c4;
+}
+
+::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #777;
+
+  &:hover {
+    background: #777;
+  }
+}
