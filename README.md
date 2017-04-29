@@ -1,6 +1,10 @@
-Starter Kit
+# Starter Kit
 
+### Installation
+```
 yarn install
 gulp
-gulp build
+build (minify .css .js)
 gulp --production
+```
+gulp
