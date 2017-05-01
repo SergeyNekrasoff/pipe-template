@@ -7,14 +7,15 @@
 // @include font-face(Samplino, fonts/Samplino)
 //
 // Rendered as CSS:
-// @font-face {
-//     font-family: "Samplino";
-//     src: url("fonts/Samplino.eot?") format("eot"),
-//          url("fonts/Samplino.woff2") format("woff2"),
-//          url("fonts/Samplino.woff") format("woff"),
-//          url("fonts/Samplino.ttf") format("truetype"),
-//          url("fonts/Samplino.svg#Samplino") format("svg");
-// }
+@font-face {
+   font-family: "font-awesome";
+   src: url("fontawesome-webfont.ttf") format("truetype"),
+       url("fontawesome-webfont.eot") format("eot"),
+      url("fontawesome-webfont.woff2") format("woff2"),
+      url("fontawesome-webfont.otf") format("opentype"),
+      url("fontawesome-webfont.woff") format("woff"),
+      url("fontawesome-webfont.svg") format("svg");
+}
 //
 // Create a font face rule that applies to bold and italic text.
 //

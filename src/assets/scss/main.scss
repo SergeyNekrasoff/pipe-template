@@ -5,8 +5,10 @@
   margin: 0;
 }
 
-ul, li {
-  list-style: none;
+ul, ol, li, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 body {
