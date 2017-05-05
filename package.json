@@ -1,10 +1,10 @@
 {
-  "name": "sp.starter",
+  "name": "Pipe-Template",
   "version": "0.0.2",
-  "description": "Boilerplate for html+js+css apps by Sborka Project",
+  "description": "Boilerplate",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sborkaproject/SP.Starter"
+    "url": "https://github.com/SergeyNekrasoff/pipe-template"
   },
   "dependencies": {
     "autoprefixer": "^6.1.0",

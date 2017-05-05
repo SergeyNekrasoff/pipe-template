@@ -10,14 +10,14 @@ $default-transition-function: ease-out;
 @import "fonts";
 @import "grid";
 @import "popup";
-@import "header";
-@import "footer";
+@import "_header";
+@import "_footer";
 @import "main";
 
 // Pages
-// @import "index";
-// @import "index";
-// @import "index";
-// @import "index";
-// @import "index";
-// @import "index";
+// @import "main/index";
+// @import "category/index";
+// @import "checkout/index";
+// @import "product/index";
+// @import "cart/index";
+// @import "faq/index";
