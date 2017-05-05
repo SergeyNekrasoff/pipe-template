@@ -9,5 +9,6 @@ yarn install
 ```
 gulp
 build (minify .css .js)
-gulp --production
+gulp webserver
+watch
 ```
