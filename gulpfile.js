@@ -2,6 +2,7 @@
 
 var gulp			   = require('gulp'),
 	argv			     = require('yargs').argv,
+	babel          = require('gulp-babel'),
 	pathplug		   = require('path'),
 	gulpif			   = require('gulp-if'),
 	watch			     = require('gulp-watch'),
@@ -111,6 +112,9 @@ gulp.task('html:build', function () {
 
 gulp.task('js:build', function () {
 	gulp.src(PATHS.src.js)
+		.pipe(babel({
+			presets: ['es2015']
+		}))
 		.pipe(rigger())
 		.pipe(gulpif(CONFIG.sourcemaps.js, sourcemaps.init()))
 		.pipe(gulpif(CONFIG.compress.js, uglify()))

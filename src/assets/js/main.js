@@ -1,4 +1,2 @@
-//= src/select.jquery.js
-// src/jquery.helpers.js
-
+//= '../../../bower_components/jquery/dist/jquery.min.js'
 //= src/app.js

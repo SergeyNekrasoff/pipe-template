@@ -9,11 +9,26 @@ ul, ol, li, dl, dt, dd {
     list-style: none;
 }
 
+input, textarea, button {
+  outline: none;
+}
+
 body {
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
   font-size: 15px;
   color: #333;
   -webkit-font-smoothing: antialiased;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: 110px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  width: auto\9;
 }
 
 ::-webkit-scrollbar {
