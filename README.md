@@ -4,6 +4,8 @@
 ```
 yarn install
 ```
+bower install
+```
 
 ### Development
 ```
