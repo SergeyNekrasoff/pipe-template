@@ -3,7 +3,7 @@
 ### Installation
 ```
 yarn install
-```
+
 bower install
 ```
 
