@@ -1,4 +1,4 @@
-# Starter Kit (PUG-SCSS-TEMPLATE)
+# Starter Kit (PUG-SCSS-BABEL)
 
 ### Installation
 ```
