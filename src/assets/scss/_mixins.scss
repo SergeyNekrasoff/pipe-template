@@ -58,3 +58,27 @@ $retina: '(min--moz-device-pixel-ratio: 1.5),
 //       background-color: lightgreen;
 //     }
 // }
+
+// Update 03.06.17
+@mixin justify {
+  text-align: justify;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    margin-bottom: -1.2em;
+  }
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+
+  > * {
+    display: inline-block;
+    position: relative;
+    top: 1.2em;
+  }
+}

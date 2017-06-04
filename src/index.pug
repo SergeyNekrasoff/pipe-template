@@ -6,5 +6,19 @@ block title
 block content
   .wrapper
     include template/_header
+    
+    section.hero-slider
+      .skin.skin-center
+        .hero-slider__inner
+          .hero-slider__slider
+              .tracker.slider
+                  .item
+                      a.link-slider(href="#"): img(src="%=static=%img/general/source_photo.jpg", alt="#")
+                  .item
+                      a.link-slider(href="#"): img(src="%=static=%img/general/source_photo_1.jpg", alt="#")
+                  .item
+                      a.link-slider(href="#"): img(src="%=static=%img/general/source_photo_2.jpg", alt="#")
+              .tracker
+                  strong Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 block footer
   include template/_footer

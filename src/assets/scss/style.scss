@@ -1,23 +1,14 @@
-$default-font-size: 14px;
-
-$default-transition-duration: 0.4s;
-$default-transition-function: ease-out;
-
 @import "lib/normalize";
 
 // Common
-@import "mixins";
-@import "fonts";
-@import "grid";
-@import "popup";
+@import "_mixins";
+@import "_vars";
+@import "_fonts";
+@import "_grid";
+@import "_popup";
 @import "_header";
 @import "_footer";
 @import "main";
 
 // Pages
 // @import "main/index";
-// @import "category/index";
-// @import "checkout/index";
-// @import "product/index";
-// @import "cart/index";
-// @import "faq/index";
