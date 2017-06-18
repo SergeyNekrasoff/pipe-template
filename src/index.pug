@@ -1,24 +1,39 @@
 extends template/template.pug
 
 block title
-  title Name Project
+  title Tommy Hilfiger
   
 block content
   .wrapper
     include template/_header
-    
-    section.hero-slider
+    section.hero
+      .hero__bg
+        img.reponsive-img.bg-img(src="../assets/img/bg/bg-main-2.jpg", alt="#")
       .skin.skin-center
-        .hero-slider__inner
-          .hero-slider__slider
+        .hero__inner
+          .hero__slider
               .tracker.slider
                   .item
-                      a.link-slider(href="#"): img(src="%=static=%img/general/source_photo.jpg", alt="#")
+                    span.item__descrp MARINE REGATTA
+                    a.link-slider(href="#"): img.tracker__img.responsive-img(src="../assets/img/slider/watch-1.png", alt="#")
+                    a.link-btn(href="#", alt="Посмотреть") Посмотреть
+                      svg
+                        rect(x="0" y="0" fill="none" width="100%" height="100%")
                   .item
-                      a.link-slider(href="#"): img(src="%=static=%img/general/source_photo_1.jpg", alt="#")
+                    span.item__descrp CLASSICO MANUFACTURE
+                    a.link-slider(href="#"): img.tracker__img.responsive-img(src="../assets/img/slider/watch-2.png", alt="#")
+                    a.link-btn(href="#", alt="Посмотреть") Посмотреть
+                      svg
+                        rect(x="0" y="0" fill="none" width="100%" height="100%")
                   .item
-                      a.link-slider(href="#"): img(src="%=static=%img/general/source_photo_2.jpg", alt="#")
-              .tracker
-                  strong Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    span.item__descrp MARINE TOURBILLON
+                    a.link-slider(href="#"): img.tracker__img.responsive-img(src="../assets/img/slider/watch-3.png", alt="#")
+                    a.link-btn(href="#", alt="Посмотреть") Посмотреть
+                      svg
+                        rect(x="0" y="0" fill="none" width="100%" height="100%")
+
+          .hero__offer
+            h1.title Новинки лета 2017
+            
 block footer
   include template/_footer

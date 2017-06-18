@@ -1,6 +1,9 @@
 *, *:after, *:before {
   box-sizing: border-box;
   margin: 0;
+  transition-property: all;
+  transition-duration: .6s;
+  transition-timing-function: ease;
 }
 
 ul, ol, li, dl, dt, dd {
@@ -9,13 +12,13 @@ ul, ol, li, dl, dt, dd {
     list-style: none;
 }
 
-input, textarea, button {
+input, textarea, button, a {
   outline: none;
 }
 
 body {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-family: 'Roboto', 'PT Sans', Helvetica, Arial, sans-serif;
+  font-size: 14px;
   color: #333;
   -webkit-font-smoothing: antialiased;
 }
@@ -29,6 +32,14 @@ img {
   height: auto;
   max-width: 100%;
   width: auto\9;
+
+  &.reponsive-img {
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, 0);
+    min-height: 100%;
+    min-width: 100%;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -50,5 +61,69 @@ img {
 
   &:hover {
     background: #777;
+  }
+}
+
+// GUI
+
+.small_text {
+  font: $font-reg;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn {
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    display: inline-block;
+    padding: 0;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.link-btn {
+  width: 50%;
+  max-width: 180px;
+  height: 40px;
+  margin: auto;
+  margin-bottom: 36px;
+  line-height: 40px;
+  cursor: pointer;
+  color: $color-mone-shaft;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  outline: none;
+
+  svg {
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  rect {
+    fill: none;
+    stroke: $color-mirage;
+    stroke-width: 1;
+    stroke-dasharray: 422, 0;
+  }
+
+  &:hover {
+    letter-spacing: 2.5px;
+
+    rect {
+      stroke-width: 2;
+      stroke-dasharray: 30, 315;
+      stroke-dashoffset: 48;
+      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    }
   }
 }

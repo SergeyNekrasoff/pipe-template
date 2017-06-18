@@ -1,9 +1,20 @@
 footer.footer
   .skin.skin-center
     .footer__inner
-      .some-div
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      .some-div
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      .some-div
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      .footer__top
+        .footer__newsletter
+          form.form-newsletter(action="#" method="method")
+            p.form__title Подписаться
+            .input-field
+              input.input(type="text" name="email-newsletter" placeholder="Email" require)
+              button.btn.btn-subscribe(type="submit") Отправить
+        .footer__logo
+          a(href="#")
+            img(src="./", alt="alt")
+        .footer-col
+          h3.title сервис
+          ul.service-list
+            li: a(href="/") FAQ
+            li: a(href="/") Доставка
+      .footer__bottom
+        span &copy 2017 All rights reserved. Curren Shop

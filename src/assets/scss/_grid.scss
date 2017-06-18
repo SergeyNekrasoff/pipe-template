@@ -1,18 +1,19 @@
 // This is mixin which you will include in parent
 // of columns. It kills default margin of inline-block
 // elements.
-@mixin row () {
+@mixin row() {
   font-size: 0;
 }
 
 .skin {
   @include row;
   position: relative;
-  margin: 0 auto 50px;
+  margin: 0 auto;
 }
 
 .skin-center {
-  width: 960px;
+  width: 1180px;
+  padding: 0 16px;
 }
 
 // This is column mixins.
