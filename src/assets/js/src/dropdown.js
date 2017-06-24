@@ -3,8 +3,9 @@
      * Plugin to tab element
      */
 
-    var cssTrigger = '.ojs-tab-trigger',
-        cssTarget = '.ojs-tab-target';
+    var cssTrigger = '.js-tab-trigger',
+        cssTarget = '.js-tab-target',
+        overlay = '.js-overlay';
 
     /**
      * Get target
@@ -46,6 +47,8 @@
             $allTriggers = $(cssTrigger).filter(namespaceFilter),
             $allTargets = $(cssTarget).filter(namespaceFilter);
 
+        $('.js-overlay').addClass('flag-active');
+
         if ($trigger.is('[data-toggle]') && $trigger.is('.flag-active')) {
             $allTriggers.removeClass('flag-active');
             $allTargets.removeClass('flag-active');
@@ -57,11 +60,10 @@
             $target.addClass('flag-active');
         }
 
-        Gevent.publish('tab:activated', {namespace: namespace, target: relation});
-
         return false;
     }
 
-    $(document).on('click', cssTrigger, onTabTriggerClick);
+    $(document)
+      .on('click', cssTrigger, onTabTriggerClick);
 
 })(jQuery);

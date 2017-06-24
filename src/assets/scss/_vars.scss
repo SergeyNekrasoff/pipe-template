@@ -1,3 +1,6 @@
+// paths
+$url-to-img: '../../assets/img/';
+
 // fonts
 $font-bold: 500 15px 'Roboto';
 $font-reg: 300 15px 'Roboto';
@@ -6,15 +9,18 @@ $font-light: 100 15px 'Roboto';
 // colors
 $color-black: #1B1404;
 $color-white: #fff;
-$color-abbey: #4C4F56;
 
+$color-abbey: #4C4F56;
 $color-mirage: #1C172E;
 $color-eastbay: #4A3D7A;
 $color-baltic: #2A292E;
 $color-jumbo: #716E7A;
 $color-alto: #D1D1D1;
 $color-mone-shaft: #2E2E2E;
+$color-silver: #c4c4c4;
+$color-goldenrod: #f9ce68;
+$color-alabaster: #fafafa;
 
 // animation
-$transition-ms: 120ms;
+$transition-ms: .2s;
 $transition-action: cubic-bezier(0.25, 0.46, 0.45, 0.94);

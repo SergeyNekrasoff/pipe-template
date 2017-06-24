@@ -19,7 +19,6 @@ input, textarea, button, a {
 body {
   font-family: 'Roboto', 'PT Sans', Helvetica, Arial, sans-serif;
   font-size: 14px;
-  color: #333;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -65,13 +64,6 @@ img {
 }
 
 // GUI
-
-.small_text {
-  font: $font-reg;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
 
 .btn {
     box-shadow: none;
@@ -125,5 +117,28 @@ img {
       stroke-dashoffset: 48;
       transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
     }
+  }
+}
+
+.link-arrow {
+  display: inline-block;
+  float: right;
+  height: 100%;
+  padding: 0 16px;
+  border-left: 1px solid $color-mirage;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .8);
+  z-index: 2;
+
+  &.flag-active {
+    display: block;
   }
 }
