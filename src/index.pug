@@ -4,36 +4,36 @@ block title
   title Tommy Hilfiger
   
 block content
-  .wrapper
-    include template/_header
-    section.hero
-      .hero__bg
-        img.reponsive-img.bg-img(src="../assets/img/bg/bg-main-2.jpg", alt="#")
-      .skin.skin-center
-        .hero__inner
-          .hero__slider
-              .tracker.slider
-                  .item
-                    span.item__descrp MARINE REGATTA
-                    a.link-slider(href="#"): img.tracker__img.responsive-img(src="../assets/img/slider/watch-1.png", alt="#")
-                    a.link-btn(href="#", alt="Посмотреть") Посмотреть
-                      svg
-                        rect(x="0" y="0" fill="none" width="100%" height="100%")
-                  .item
-                    span.item__descrp CLASSICO MANUFACTURE
-                    a.link-slider(href="#"): img.tracker__img.responsive-img(src="../assets/img/slider/watch-2.png", alt="#")
-                    a.link-btn(href="#", alt="Посмотреть") Посмотреть
-                      svg
-                        rect(x="0" y="0" fill="none" width="100%" height="100%")
-                  .item
-                    span.item__descrp MARINE TOURBILLON
-                    a.link-slider(href="#"): img.tracker__img.responsive-img(src="../assets/img/slider/watch-3.png", alt="#")
-                    a.link-btn(href="#", alt="Посмотреть") Посмотреть
-                      svg
-                        rect(x="0" y="0" fill="none" width="100%" height="100%")
-
-          .hero__offer
-            h1.title Новинки лета 2017
+  .wrapper#wrapper
+    .container#container
+      include template/_header
+      //- section.block
+      //-   .skin.skin-center
+      //-     .block__inner
+      //-       .block__slider
+      //-           .tracker.slider
+      //-               .item
+      //-               .item
+      //-               .item
+      
+      //- section.block
+      //-   .skin.skin-center
+      //-     .block__inner
+      //-       .block__item
+      //-       .block__item
+      //-       .block__item
+      
+      //- section.block
+      //-   .skin.skin-center
+      //-     .block__inner
+      //-       form(id="form-subscribe", method="POST", action="#")
+      //-         .input-field
+      //-           input.input(type='text', name='firstname', placeholder='Введите ваше имя')
+      //-           label.label(for='firstname') 
+      //-         .input-field
+      //-           input.input(type='email', name='firstname', placeholder='E-mail')
+      //-           label.label(for='email') 
+            
             
 block footer
   include template/_footer

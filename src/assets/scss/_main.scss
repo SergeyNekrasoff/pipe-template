@@ -24,7 +24,6 @@ body {
 
 .wrapper {
   min-height: 100%;
-  margin-bottom: 110px;
 }
 
 img {
@@ -76,56 +75,6 @@ img {
     position: relative;
     text-transform: uppercase;
     text-align: center;
-}
-
-.link-btn {
-  width: 50%;
-  max-width: 180px;
-  height: 40px;
-  margin: auto;
-  margin-bottom: 36px;
-  line-height: 40px;
-  cursor: pointer;
-  color: $color-mone-shaft;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 12px;
-  letter-spacing: 2px;
-  outline: none;
-
-  svg {
-    height: 40px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
-
-  rect {
-    fill: none;
-    stroke: $color-mirage;
-    stroke-width: 1;
-    stroke-dasharray: 422, 0;
-  }
-
-  &:hover {
-    letter-spacing: 2.5px;
-
-    rect {
-      stroke-width: 2;
-      stroke-dasharray: 30, 315;
-      stroke-dashoffset: 48;
-      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
-    }
-  }
-}
-
-.link-arrow {
-  display: inline-block;
-  float: right;
-  height: 100%;
-  padding: 0 16px;
-  border-left: 1px solid $color-mirage;
 }
 
 .overlay {
