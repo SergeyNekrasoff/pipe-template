@@ -1,7 +1,7 @@
-//= '../../../bower_components/jquery/dist/jquery.min.js'
-//= '../../../bower_components/slick-carousel/slick/slick.min.js'
-//= src/app.js
+window.$ = window.jQuery = require('jquery');
+var validate = require('validate.js');
+require('slick-carousel');
 
-// Includes
-//= src/slick-settings.js
-//= src/dropdown.js
+// Plugins
+require('./src/form_validation');
+require ('./src/slick-settings');

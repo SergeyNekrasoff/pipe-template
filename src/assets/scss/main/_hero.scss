@@ -1,0 +1,204 @@
+.hero {
+  position: relative;
+  height: 600px;
+  margin: auto 16px;
+  overflow: hidden;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background: rgba($color-mirage, .69);
+      z-index: 1;
+    }
+
+    img {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -25%);
+    }
+  }
+
+  &__slider,
+  &__offer {
+    @include col(1, 2, $align: middle);
+    position: relative;
+    z-index: 1
+  }
+
+  &__slider {
+    position: relative;
+    top: 0;
+
+    .slick-list {
+      background: rgba(255, 255, 255, 1);
+    }
+
+    .item {
+      text-align: center;
+
+      &__descrp {
+        font: $font-bold;
+        font-size: 20px;
+        color: $color-mone-shaft;
+        display: inline-block;
+        padding: 2px 0;
+        margin-top: 94px;
+      }
+
+      .link-slider,
+      .link-btn {
+        display: block;
+        position: relative;
+      }
+
+      .link-btn {
+        color: $color-mirage;
+
+        rect {
+          stroke: $color-mirage;
+        }
+      }
+    }
+
+    .slick-arrow {
+      background: $color-alto;
+      top: 27px;
+      width: 85px;
+      height: 54px;
+      z-index: 1;
+
+      &:before {
+        color: $color-mone-shaft;
+      }
+
+      &.slick-prev {
+        left: auto;
+        right: 84px;
+      }
+
+      &.slick-next {
+        left: auto;
+        right: 0;
+      }
+    }
+
+    .slick-dots {
+      width: auto;
+      right: 3px;
+      top: 53px;
+      bottom: auto;
+
+      li {
+        margin: 0;
+
+        button {
+          &:before {
+            font-size: 17px;
+          }
+        }
+
+        &.slick-active {
+          button:before {
+            color: $color-eastbay;
+          }
+        }
+
+        button:hover {
+          &:before {
+            color: $color-eastbay;
+          }
+        }
+      }
+    }
+  }
+
+  .tracker {
+    width: 75%;
+    margin: auto;
+
+    &__img {
+      width: 280px;
+      margin: 42px auto;
+    }
+  }
+
+  &__offer {
+    vertical-align: top;
+    margin-top: 145px;
+    color: $color-white;
+    text-align: right;
+
+    .title {
+      font: 600 15px "Roboto";
+      font-size: 35px;
+      color: $color-white;
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .btn-buy {
+      display: inline-block;
+      background: $color-goldenrod;
+      font-weight: 500;
+      font-size: 18px;
+      color: $color-mone-shaft;
+      margin: 32px auto 0;
+      max-width: 500px;
+      height: 50px;
+      line-height: 50px;
+
+      &:hover {
+        background: $color-silver;
+      }
+    }
+  }
+
+  &__text {
+    font: $font-reg;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .scroll-downs {
+    position: absolute;
+    left: 50%;
+    bottom: -25px;
+    margin-left: -7px;
+    height: 20px;
+    width: 14px;
+    height: 20px;
+  }
+
+  .mouse {
+    width: 12px;
+    height: 20px;
+    border: 1px solid $color-white;
+    border-radius: 25px;
+    opacity: .75;
+
+    .scroller {
+      width: 2px;
+      height: 3px;
+      border-radius: 25%;
+      margin: 3px auto 0;
+      background-color: $color-white;
+      animation-name: scroll;
+      animation-duration: 2.2s;
+      animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+      animation-iteration-count: infinite;
+    }
+  }
+}

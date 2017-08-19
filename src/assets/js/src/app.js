@@ -1,32 +1,29 @@
-var initKit = function(greeting) {
+const initKit = (greeting) => {
   return greeting;
 };
 
-console.log(initKit('Init Starter Kit'));
+console.log(initKit('Init Project'));
 
 $(function() {
-
-  function floatLabel(e) {
+  const floatLabel = (e) => {
     var $target = $(e.target);
 
-      if ($target.val() == '') {
-          $target.removeClass('flag-filled');
-      } else {
-          $target.addClass('flag-filled');
-      }
-  }
+    if ($target.val() == '') {
+      $target.removeClass('flag-filled');
+    } else {
+      $target.addClass('flag-filled');
+    }
+  };
 
-  function overlay(e) {
+  const overlay = (e) => {
     var $target = $(e.target),
-        $menu = $('.js-tab-target');
+    $menu = $('.js-tab-target');
 
     $target.removeClass('flag-active');
     $menu.removeClass('flag-active');
   };
 
-  // Actions
   $(document)
     .on('click', '.js-overlay', overlay)
     .on('input', '.input', floatLabel);
-
 });

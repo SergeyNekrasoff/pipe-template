@@ -3,7 +3,7 @@
      * Plugin to tab element
      */
 
-    var cssTrigger = '.js-tab-trigger',
+    const cssTrigger = '.js-tab-trigger',
         cssTarget = '.js-tab-target',
         overlay = '.js-overlay';
 

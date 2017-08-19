@@ -1,9 +1,6 @@
 *, *:after, *:before {
   box-sizing: border-box;
   margin: 0;
-  transition-property: all;
-  transition-duration: .6s;
-  transition-timing-function: ease;
 }
 
 ul, ol, li, dl, dt, dd {
@@ -17,27 +14,18 @@ input, textarea, button, a {
 }
 
 body {
+  background: rgba(255, 255, 255, .9);
   font-family: 'Roboto', 'PT Sans', Helvetica, Arial, sans-serif;
   font-size: 14px;
+  color: $color-mone-shaft;
   -webkit-font-smoothing: antialiased;
 }
 
-.wrapper {
-  min-height: 100%;
-}
-
-img {
-  height: auto;
-  max-width: 100%;
-  width: auto\9;
-
-  &.reponsive-img {
-    left: 50%;
-    position: relative;
-    transform: translate(-50%, 0);
-    min-height: 100%;
-    min-width: 100%;
-  }
+p {
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 ::-webkit-scrollbar {
@@ -59,35 +47,5 @@ img {
 
   &:hover {
     background: #777;
-  }
-}
-
-// GUI
-
-.btn {
-    box-shadow: none;
-    outline: none;
-    background-color: transparent;
-    border: 0;
-    border-radius: 0;
-    display: inline-block;
-    padding: 0;
-    position: relative;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.overlay {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, .8);
-  z-index: 2;
-
-  &.flag-active {
-    display: block;
   }
 }

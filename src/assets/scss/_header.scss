@@ -1,4 +1,94 @@
 .header {
+
     &__inner {
+      font: $font-reg;
+      color: $color-alto;
     }
+
+    &__top {
+      background: $color-mirage;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      padding: 10px 0;
+      z-index: 1;
+
+      .small_text {
+        color: $color-alto;
+      }
+
+      .pr-code {
+        font: $font-bold;
+        font-size: 10px;
+        color: $color-white;
+        cursor: pointer;
+      }
+
+      .i-plus {
+        display: inline-block;
+        margin-left: 5px;
+        font-size: 14px;
+        vertical-align: middle;
+      }
+    }
+
+    &__bottom {
+      @extend %clearfix;
+      margin-top: 37px;
+    }
+
+    &__logo {
+      float: left;
+      margin: 25px 0;
+
+      .link-logo {
+        display: inline-block;
+        width: 200px;
+        height: 80px;
+
+        .img-logo {
+          max-width: 100%;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+}
+
+.menu {
+  float: right;
+  margin-top: 50px;
+
+  &__nav {
+  }
+
+  &.flag-active {
+    display: block;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 20px;
+    padding: 8px;
+    vertical-align: middle;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .link {
+    font: $font-bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: $color-abbey;
+    text-transform: uppercase;
+    transition: .2s $transition-action;
+
+    &:hover {
+      color: $color-mone-shaft;
+    }
+  }
 }

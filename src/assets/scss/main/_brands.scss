@@ -1,0 +1,44 @@
+.brands {
+  background: $color-white;
+  margin: auto 16px;
+  border-bottom: 1px solid rgba($color-alto, .5);
+
+  &__inner {
+    padding: 36px 0;
+  }
+
+  &__list {
+    @include justify;
+    width: 83%;
+    margin: auto;
+
+    li {
+      width: 19%;
+      padding: 8px 16px;
+    }
+  }
+
+  .brand {
+    display: inline-block;
+    width: 100%;
+    height: 75px;
+  }
+
+  .brand_kashidun {
+    background: url($url-to-img + 'kashidun_logo.png') no-repeat;
+    background-position-y: 12px;
+    background-size: contain;
+  }
+  .brand_liandu {
+    background: url($url-to-img + 'liandu_logo.png') no-repeat;
+    background-size: contain;
+  }
+  .brand_sinobi {
+    background: url($url-to-img + 'sinobi_logo.png') no-repeat;
+    background-size: contain;
+  }
+  .brand_amuda {
+    background: url($url-to-img + 'amuda_logo.png') no-repeat;
+    background-size: contain;
+  }
+}

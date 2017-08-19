@@ -1,3 +1,11 @@
 {
-  "presets": ["es2015"]
+	"ignore": [
+		"node_modules/**/*"
+	],
+	"plugins": [
+		"transform-es2015-modules-commonjs"
+	],
+	"presets": [
+		"es2015"
+	]
 }

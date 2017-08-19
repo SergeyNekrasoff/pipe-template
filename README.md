@@ -1,16 +1,26 @@
-# Starter Kit (PUG-SCSS-BABEL)
+# Clean Project (PUG-SCSS-BABEL)
 
-### Installation
+### 1.Installation
 ```
 yarn install
 
 bower install
 ```
 
-### Development
+
+### 2.Development
 ```
-gulp
-build (minify .css .js)
-gulp webserver
-watch
+npm start
+```
+
+
+### 3.Production
+```
+npm run build
+```
+
+
+### 4.Build ZIP
+```
+npm run zip
 ```

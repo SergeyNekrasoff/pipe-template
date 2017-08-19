@@ -1,28 +1,62 @@
 doctype html
-html
+html(lang="ru")
     head
-        meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0")
+        meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0")
         meta(http-equiv="Content-type" content="text/html; charset=utf-8")
         meta(http-equiv="X-UA-Compatible" content="IE=Edge")
-        meta(content="" name="keywords")
-        meta(content="" name="description")
         meta(name="robots" content="noindex")
-        meta(name="format-detection" content="telephone=no")
         meta(name="mobile-web-app-capable" content="yes")
+        meta(name="imagetoolbar" content="no")
+        meta(name="HandheldFriendly" content="True")
+        meta(name="apple-mobile-web-app-capable" conten="yes")
+        meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+        meta(name="application-name" content="Title")
+        meta(name="msapplication-tooltip" content="Description")
+        meta(http-equiv="msthemecompatible" content="no")
+        meta(http-equiv="cleartype" content="on")
+
+        //- Seo
+        meta(name="description" content="")
+        meta(name="keywords" content="")
+        meta(name="author" content="")
+        meta(name="copyright" content="(c)")
+        meta(http-equiv="Reply-to" content="justrichwatches@yandex.ru")
+
+        link(rel="icon" href="./resources/favicon.ico")
+        link(sizes="57x57" href="./resources.apple-touch-icon-57x57.png" rel="apple-touch-icon")
+        link(sizes="60x60" href="./resources.apple-touch-icon-60x60.png" rel="apple-touch-icon")
+        link(sizes="72x72" href="./resources.apple-touch-icon-72x72.png" rel="apple-touch-icon")
+        link(sizes="76x76" href="./resources.apple-touch-icon-76x76.png" rel="apple-touch-icon")
+        link(sizes="96x96" href="./resources.apple-touch-icon-96x96.png" rel="apple-touch-icon")
+        link(sizes="152x152" href="./resources.apple-touch-icon-152x152.png" rel="apple-touch-icon")
+        link(sizes="120x120" href="./resources.apple-touch-icon-120x120.png" rel="apple-touch-icon")
+        link(sizes="114x114" href="./resources.apple-touch-icon-114x114.png" rel="apple-touch-icon")
+        link(sizes="144x144" href="./resources.apple-touch-icon-144x144.png" rel="apple-touch-icon")
+        link(sizes="160x160" href="./resources.apple-touch-icon-160x160.png" rel="apple-touch-icon")
+        link(sizes="192x192" href="./resources.apple-touch-icon-192x192.png" rel="apple-touch-icon")
+        link(sizes="180x180" href="./resources.apple-touch-icon-180x180.png" rel="apple-touch-icon")
+        link(sizes="16x16" href="./resources.apple-touch-icon-16x16.png" rel="apple-touch-icon")
+        link(sizes="32x32" href="./resources.apple-touch-icon-32x32.png" rel="apple-touch-icon")
+
+        link(rel="manifest" href="./resources/manifest.json")
         block title
             title Default Name
         link(rel="stylesheet", href="assets/css/style.css")
-        link(rel="stylesheet", href="assets/fonts/fonts.css")
+        //- link(rel="stylesheet", href="assets/fonts/fonts.css")
         //- <!--[if gt IE 7]>
         //- link(rel="stylesheet", href="css/ie8.css")
         //- <![endif]-->
         <!--[if IE 9]>
-        script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
-        script(src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js")
+          script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
+          script(src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js")
         <![endif]-->
+        //- block script-before-head-end
 
     body
         .overlay.js-overlay
         block content
         block footer
-        script(src="assets/js/main.js")
+        block script
+          script(src="assets/js/main.build.js")
+          script(src="assets/js/app.build.js")
+        block script-before-body-end

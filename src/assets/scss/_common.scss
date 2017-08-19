@@ -1,0 +1,243 @@
+.wrapper {
+  min-height: 100%;
+}
+
+.link {
+  color: $color-alto;
+  text-decoration: none;
+  transition: .35s $transition-action;
+
+  &:hover {
+    color: $color-jumbo;
+  }
+}
+
+.scroll-disable {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  width: auto\9;
+
+  &.responsive-img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100%;
+    min-width: 100%;
+  }
+}
+
+// GUI
+.small_text {
+  font: $font-reg;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.btn {
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    display: inline-block;
+    padding: 0;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    transition: .35s $transition-action;
+}
+
+.btn-fx {
+  width: 50%;
+  max-width: 180px;
+  height: 40px;
+  margin: auto;
+  margin-bottom: 36px;
+  line-height: 40px;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 2px;
+  outline: none;
+  transition: .35s $transition-action;
+
+  svg {
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  rect {
+    fill: none;
+    stroke: $color-mirage;
+    stroke-width: 1;
+    stroke-dasharray: 422, 0;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  &:hover {
+    letter-spacing: 2.5px;
+
+    rect {
+      stroke-width: 2;
+      stroke-dasharray: 30, 315;
+      stroke-dashoffset: 48;
+      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .8);
+  z-index: 2;
+
+  &.flag-active {
+    display: block;
+  }
+}
+
+.wrap-title {
+  text-transform: uppercase;
+  margin-bottom: 54px;
+  margin-left: 100px;
+
+}
+
+.title {
+  font: $font-bold;
+  font-size: 34px;
+  line-height: 46px;
+  letter-spacing: 1px;
+  color: $color-mone-shaft;
+
+  .subtitle {
+    font: $font-reg;
+    font-size: 28px;
+    display: inline-block;
+    width: 100%;
+
+    &:before {
+      content: '';
+      position: relative;
+      display: inline-block;
+      top: -6px;
+      left: 1px;
+      width: 100px;
+      height: 2px;
+      margin: 0 8px 0 0;
+      background: $color-mone-shaft;
+    }
+  }
+}
+
+.subscribe {
+  @extend %clearfix;
+
+  .input-field {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .label {
+    display: inline-block;
+    width: 200px;
+    position: relative;
+
+    .error-text {
+      display: inline-block;
+      color: $color-persimmon;
+      margin-top: 15px;
+    }
+
+    .input-placeholder {
+      position: absolute;
+      display: none;
+      top: -4px;
+      left: 7px;
+      padding: 0 7px;
+      height: 12px;
+      background: transparent;
+      color: $color-alto;
+      z-index: 1;
+    }
+
+    .clear-button {
+      display: none;
+      font: $font-reg;
+      font-size: 12px;
+      position: absolute;
+      top: 2px;
+      right: 6px;
+      text-align: center;
+      width: 14px;
+      height: 14px;
+      line-height: 12px;
+      border-radius: 50%;
+      border: 1px solid $color-silver;
+      color: $color-silver;
+      transform: rotate(45deg);
+      cursor: pointer;
+    }
+  }
+
+  .input {
+    font: $font-reg;
+    font-size: 14px;
+    color: $color-alto;
+    background: transparent;
+    position: relative;
+    padding: 2px 24px 2px 6px;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid $color-alto;
+
+    &:focus {
+      .input-placeholder { display: inline-block; }
+      .clear-button { display: block; }
+    }
+
+    &.flag-error {
+      border-color: $color-persimmon;
+    }
+  }
+
+  .btn-subscribe {
+    background: $color-alto;
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 22px;
+    color: $color-mone-shaft;
+    transition: .2s $transition-action;
+
+    &:hover {
+      background: $color-jumbo;
+    }
+  }
+}
+
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(5px); opacity: 0;}
+}

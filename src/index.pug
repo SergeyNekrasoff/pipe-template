@@ -1,39 +1,110 @@
 extends template/template.pug
 
 block title
-  title Tommy Hilfiger
+  title Just Rich Watches | Стильные мужские часы
   
 block content
   .wrapper#wrapper
     .container#container
       include template/_header
-      //- section.block
-      //-   .skin.skin-center
-      //-     .block__inner
-      //-       .block__slider
-      //-           .tracker.slider
-      //-               .item
-      //-               .item
-      //-               .item
-      
-      //- section.block
-      //-   .skin.skin-center
-      //-     .block__inner
-      //-       .block__item
-      //-       .block__item
-      //-       .block__item
-      
-      //- section.block
-      //-   .skin.skin-center
-      //-     .block__inner
-      //-       form(id="form-subscribe", method="POST", action="#")
-      //-         .input-field
-      //-           input.input(type='text', name='firstname', placeholder='Введите ваше имя')
-      //-           label.label(for='firstname') 
-      //-         .input-field
-      //-           input.input(type='email', name='firstname', placeholder='E-mail')
-      //-           label.label(for='email') 
-            
-            
+
+      section.hero
+        .hero__bg
+          img.reponsive-img.bg-img(src="../assets/img/bg/bg-main-2.jpg", alt="#")
+        .skin.skin-center
+          .hero__inner
+            .hero__slider
+                .tracker.slider
+                    .item
+                      span.item__descrp MARINE REGATTA
+                      a.link-slider(href="#"): img.tracker__img(src="../assets/img/slider/amuda_skin.png", alt="#")
+                      a.link-btn.btn-fx(href="#", alt="Посмотреть") Посмотреть
+                        svg
+                          rect(x="0" y="0" fill="none" width="100%" height="100%")
+                    .item
+                      span.item__descrp CLASSICO MANUFACTURE
+                      a.link-slider(href="#"): img.tracker__img(src="../assets/img/slider/kashidun_skin.jpg", alt="#")
+                      a.link-btn.btn-fx(href="#", alt="Посмотреть") Посмотреть
+                        svg
+                          rect(x="0" y="0" fill="none" width="100%" height="100%")
+                    .item
+                      span.item__descrp MARINE TOURBILLON
+                      a.link-slider(href="#"): img.tracker__img(src="../assets/img/slider/liandu_skin.png", alt="#")
+                      a.link-btn.btn-fx(href="#", alt="Посмотреть") Посмотреть
+                        svg
+                          rect(x="0" y="0" fill="none" width="100%" height="100%")
+            .hero__offer
+              h1.title Коллекция часов 2017
+              p.regular-text.hero__text Мужские наручные часы премиум сегмента</br> для ценителей изысканности в деталях </br>и знающих цену времени
+              a.btn-fx.btn-buy(href="#", alt="Посмотреть") Посмотреть все
+            .scroll-downs
+              .mouse
+                .scroller
+
+      section.brands
+        .skin.skin-center
+          .brands__inner
+            ul.brands__list
+              li: span.brand.brand_kashidun(href="#" alt="alt")
+              li: span.brand.brand_liandu(href="#" alt="alt")
+              li: span.brand.brand_amuda(href="#" alt="alt")
+              li: span.brand.brand_sinobi(href="#" alt="alt")
+
+      section.catalog
+        .skin.skin-center
+          .wrap-title
+            h2.title Новинки недели
+              span.subtitle сделайте свой выбор
+          .catalog__inner
+            .catalog__item.item_top
+              a.catalog__item-link(href="#")
+                p.catalog__title AMUDA
+                span.catalog__sub-title Classico
+                img.catalog__img(src="../assets/img/slider/amuda_skin.png", alt="alt")
+            .catalog__item
+              a.catalog__item-link(href="#")
+                p.catalog__title KASHIDUN
+                span.catalog__sub-title Deluxe
+                img.catalog__img(src="../assets/img/slider/kashidun_skin.jpg", alt="alt")
+            .catalog__item
+              a.catalog__item-link(href="#")
+                p.catalog__title LIANDU
+                span.catalog__sub-title Premium
+                img.catalog__img(src="../assets/img/slider/liandu_skin.png", alt="alt")
+
+      section.discount
+        canvas#glitch.glitch
+        .skin
+          .discount__inner
+            h3.discount__title
+              span -20%
+              | от стоимости часов при вводе промо-кода
+            button.btn.btn-fx.btn-pull-promo.js-popup-trigger(data-rel="popup-promo") Получить
+
+      section.advantages
+        .skin.skin-center
+          .wrap-title
+            h2.title Наши
+              span.subtitle достоинства
+          .advantages__inner
+            .item
+              img.responsive-img.icon-img(src="../assets/img/tag.svg", alt="alt")
+              strong.title Бренды
+              span.small_text проверенные временем
+            .item
+              img.responsive-img.icon-img(src="../assets/img/box.svg", alt="alt")
+              strong.title Бесплатная доставка
+              span.small_text 1 класс доставки
+            .item
+              img.responsive-img.icon-img(src="../assets/img/dialog.svg", alt="alt")
+              strong.title сервис
+              span.small_text Персональный подход </br>к клиенту  
+
+  .popup.js-popup-overlay.js-popup-box.js-popup-target.display-none(data-rel="popup-promo")
+    .popup-wrapper
+      span.btn-close.js-popup-close
+        i.fa.fa-close
+      .popup-wrapper__content
+
 block footer
   include template/_footer

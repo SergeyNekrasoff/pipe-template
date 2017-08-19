@@ -1,7 +1,35 @@
 footer.footer#footer
   .skin.skin-center
     .footer__inner
-      .footer__left
-      .footer__right
-        span.small_text &copy 2017 Все права защищены.
-        a.link(href="#") Политика конфиденциальности 
+      .footer__top
+        .footer__col
+          a.link.link-logo
+            img.img-logo(src="../assets/img/logo2_w.png", alt="alt")
+          p.small_text Just Rich Watches современный интернет-магазин с продуманной логистикой, персональным подходом к клиенту и быстрой доставкой
+          .social
+            a.link(href="//www.instagram.com/just_rich_watches/", target="_blank" alt="instagram профиль магазина 'Just Rich Watches'" title="Instagram профиль магазина 'Just Rich Watches'")
+              i.fa.fa-instagram
+        .footer__col
+          h5.title Информация
+          ul.info-list
+            li: a.link(href="/") Гарантия
+            li: a.link(href="/") Как заказать
+            li: a.link(href="/") Доставка & возврат
+            li: a.link(href="/") Наша политика
+        .footer__col
+          h5.title Новостная рассылка
+          p.small_text Удостовертесь, что никогда не пропустите наши интересные предложения, подписавшись на рассылку
+          .subscribe
+            form.js-form-subscribe.form-subscribe
+              input(type="hidden" name="admin_email" value="justrichwatches.info@yandex.ru")
+              .input-field
+                label.label.flag-important(for='email')
+                  input.input.js-input-form.flag-important(type="email", name="email", placeholder="E-mail", title="Имя пользователя")
+                  span.error-text(data-error="email")
+                  span.error-text.js-error-form
+                  span.input-placeholder Ваше имя *
+                  span.clear-button.js-form-input-clear +
+                button.btn.btn-primary.btn-subscribe.js-subscribe(type="submit"): i.fa.fa-send
+      .footer__bottom
+        span.small_text &copy 2017 <b>Just Rich Watches</b>
+        a.link(href="./privacy-policy.html") Политика конфиденциальности

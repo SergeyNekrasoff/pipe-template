@@ -1,0 +1,54 @@
+.advantages {
+  position: relative;
+  margin: 100px 16px;
+  padding: 64px 0;
+
+  &__inner {
+    @include justify;
+  }
+
+  .item {
+    text-align: center;
+    padding: 16px 0;
+    width: 30%;
+    vertical-align: middle;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 75px;
+      left: 50%;
+      margin-left: -11px;
+      height: 2px;
+      width: 22px;
+      display: inline-block;
+      background: $color-eastbay;
+    }
+
+    .icon-img {
+      display: inline-block;
+      margin: auto;
+      height: 54px;
+      width: 100%;
+      margin-bottom: 38px;
+    }
+
+    .title {
+      font: $font-bold;
+      font-size: 13px;
+      color: $color-mone-shaft;
+      text-transform: uppercase;
+      line-height: 20px;
+      letter-spacing: 0.08em;
+      display: inline-block;
+    }
+
+    .small_text {
+      display: inline-block;
+      width: 100%;
+      font-size: 13px;
+      line-height: 1.4;
+      color: $color-jumbo;
+    }
+  }
+}

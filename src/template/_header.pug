@@ -1,15 +1,18 @@
 header.header
+  .header__top
+    span.small_text Используйте промо-код при покупке и получите скидку:
+      span.pr-code.js-popup-trigger(data-rel="popup-promo")
+        i.fa.fa-plus-square.i-plus
+
   .skin.skin-center
     .header__inner
-      .header__top
       .header__bottom
-    .header__menu
-      button.btn.btn-menu.js-tab-trigger.flag-active(data-rel="nav") menu
-        i.fa.fa-reorder
-      .menu
-        nav.menu__nav.js-tab-target(data-rel="nav")
-          li: a.link(href="/") link
-          li: a.link(href="/") link
-          li: a.link(href="/") link
-          li: a.link(href="/") link
-          li: a.link(href="/") link
+        .header__logo
+          a.link.link-logo(href="./")
+            img.img-logo(src="../assets/img/logo2.png", alt="alt")
+        menu.menu
+          nav.menu__nav(role="menu")
+            li: a.link(href="/") Коллекция
+            li: a.link(href="/") Сервис
+            li: a.link(href="/") Доставка
+            li: a.link(href="/") отзывы
