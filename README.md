@@ -1,4 +1,4 @@
-# Clean Project (PUG-SCSS-BABEL)
+# Pipe Template (pug-scss-es6-jquery)
 
 ### 1.Installation
 ```
