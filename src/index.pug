@@ -2,12 +2,12 @@ extends template/template.pug
 
 block title
   title Just Rich Watches | Стильные мужские часы
-  
+
 block content
   .wrapper#wrapper
     .container#container
       include template/_header
-
+  
       section.hero
         .hero__bg
           img.reponsive-img.bg-img(src="../assets/img/bg/bg-main-2.jpg", alt="#")
@@ -40,7 +40,7 @@ block content
             .scroll-downs
               .mouse
                 .scroller
-
+  
       section.brands
         .skin.skin-center
           .brands__inner
@@ -49,7 +49,7 @@ block content
               li: span.brand.brand_liandu(href="#" alt="alt")
               li: span.brand.brand_amuda(href="#" alt="alt")
               li: span.brand.brand_sinobi(href="#" alt="alt")
-
+  
       section.catalog
         .skin.skin-center
           .wrap-title
@@ -71,7 +71,7 @@ block content
                 p.catalog__title LIANDU
                 span.catalog__sub-title Premium
                 img.catalog__img(src="../assets/img/slider/liandu_skin.png", alt="alt")
-
+  
       section.discount
         canvas#glitch.glitch
         .skin
@@ -79,8 +79,8 @@ block content
             h3.discount__title
               span -20%
               | от стоимости часов при вводе промо-кода
-            button.btn.btn-fx.btn-pull-promo.js-popup-trigger(data-rel="popup-promo") Получить
-
+            button.btn.btn-fx.btn-pull-promo.js-tab-trigger(data-rel="promo-code") Получить
+  
       section.advantages
         .skin.skin-center
           .wrap-title
@@ -98,13 +98,24 @@ block content
             .item
               img.responsive-img.icon-img(src="../assets/img/dialog.svg", alt="alt")
               strong.title сервис
-              span.small_text Персональный подход </br>к клиенту  
-
+              span.small_text Персональный подход </br>к клиенту          
+  
+  //- Popus group
   .popup.js-popup-overlay.js-popup-box.js-popup-target.display-none(data-rel="popup-promo")
     .popup-wrapper
       span.btn-close.js-popup-close
         i.fa.fa-close
       .popup-wrapper__content
+        h5 This Header
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 block footer
   include template/_footer
+  
+block script-before-body-end
+  script(src="assets/js/index.build.js")

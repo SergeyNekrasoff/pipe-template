@@ -1,7 +1,7 @@
 ;(function($) {
     'use strict';
 
-    window.$ = window.jQuery = require('jquery');
+    var validate = require('validate.js');
 
     /**
      * Class for validation html form
@@ -26,6 +26,7 @@
             this.file = '.js-file-form';
             this.checkboxGroup = '.js-checkbox-group';
             this.formMessage = '.js-error-message';
+            this.clearInput = '.js-form-input-clear';
 
             // Constants
             this.maxFileSize = 10485760; // 10 MB (size is also in bytes)
@@ -51,6 +52,12 @@
         init() {
             this.$form.on('submit', () => {
                 return !this.options.isAjax;
+            });
+
+            this.$form.find(this.clearInput).on('click', (e) => {
+              const $target = $(e.target);
+
+              $target.parent().find(this.inputs).val('');
             });
 
             this.$form.find(this.submitBtn).on('click', () => this.beforeSubmit());
@@ -207,6 +214,7 @@
         clearErrors() {
             this.$form.find('.error-text').removeClass('error-active').empty();
             this.$form.find('.flag-error').removeClass('flag-error');
+            // this.$form.find(this.clearInput).addClass('flag-active');
             this.setSaveButtonEnabled(true);
         }
 

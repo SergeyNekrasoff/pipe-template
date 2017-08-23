@@ -24,6 +24,6 @@ $(function() {
   };
 
   $(document)
-    .on('click', '.js-overlay', overlay)
-    .on('input', '.input', floatLabel);
+  .on('click', '.js-overlay', overlay)
+  .on('input', '.input', floatLabel);
 });

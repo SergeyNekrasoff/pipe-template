@@ -156,6 +156,7 @@ img {
     display: inline-block;
     width: 100%;
     text-align: center;
+    margin: 8px 0;
   }
 
   .label {
@@ -166,7 +167,8 @@ img {
     .error-text {
       display: inline-block;
       color: $color-persimmon;
-      margin-top: 15px;
+      margin-top: 6px;
+      font-size: 11px;
     }
 
     .input-placeholder {
@@ -197,6 +199,10 @@ img {
       color: $color-silver;
       transform: rotate(45deg);
       cursor: pointer;
+
+      &.flag-active {
+        display: inline-block;
+      }
     }
   }
 
@@ -221,11 +227,15 @@ img {
     }
   }
 
+  .label, .btn-subscribe {
+    vertical-align: top;
+  }
+
   .btn-subscribe {
     background: $color-alto;
     display: inline-block;
     position: relative;
-    width: 50px;
+    width: auto;
     height: 22px;
     color: $color-mone-shaft;
     transition: .2s $transition-action;

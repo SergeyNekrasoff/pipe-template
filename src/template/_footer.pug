@@ -20,8 +20,8 @@ footer.footer#footer
           h5.title Новостная рассылка
           p.small_text Удостовертесь, что никогда не пропустите наши интересные предложения, подписавшись на рассылку
           .subscribe
-            form.js-form-subscribe.form-subscribe
-              input(type="hidden" name="admin_email" value="justrichwatches.info@yandex.ru")
+            form.form-subscribe.js-form-subscribe(novalidate)
+              input(type="hidden" name="admin_email" value="")
               .input-field
                 label.label.flag-important(for='email')
                   input.input.js-input-form.flag-important(type="email", name="email", placeholder="E-mail", title="Имя пользователя")
@@ -29,7 +29,8 @@ footer.footer#footer
                   span.error-text.js-error-form
                   span.input-placeholder Ваше имя *
                   span.clear-button.js-form-input-clear +
-                button.btn.btn-primary.btn-subscribe.js-subscribe(type="submit"): i.fa.fa-send
+                  
+                button.btn.btn-primary.btn-subscribe.js-subscribe.js-submit-form(type="submit"): i.fa.fa-send
       .footer__bottom
         span.small_text &copy 2017 <b>Just Rich Watches</b>
         a.link(href="./privacy-policy.html") Политика конфиденциальности

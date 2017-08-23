@@ -50,13 +50,10 @@ html(lang="ru")
           script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
           script(src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js")
         <![endif]-->
-        //- block script-before-head-end
 
     body
         .overlay.js-overlay
         block content
         block footer
-        block script
-          script(src="assets/js/main.build.js")
-          script(src="assets/js/app.build.js")
+        script(src="assets/js/main.build.js")
         block script-before-body-end

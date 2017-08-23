@@ -1,7 +1,18 @@
+
 window.$ = window.jQuery = require('jquery');
-var validate = require('validate.js');
-require('slick-carousel');
 
 // Plugins
-require('./src/form_validation');
+require('slick-carousel');
+
+// Custom plugins
+require ('./vendor/smoothScroll');
+require ('./vendor/dropdown');
+require ('./vendor/scrollTo');
+require ('./vendor/tooltip');
+require ('./vendor/curtain');
+require ('./vendor/sticky');
+require ('./vendor/popup');
+
+// Includes
+require ('./src/app');
 require ('./src/slick-settings');

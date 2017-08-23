@@ -68,6 +68,36 @@
       line-height: 1.8;
     }
   }
+
+  .subscribe {
+    @extend %clearfix;
+
+    .input-field {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
+
+    .label {
+      display: inline-block;
+      width: 170px;
+      position: relative;
+    }
+
+    .btn-subscribe {
+      background: $color-alto;
+      display: inline-block;
+      position: relative;
+      width: 50px;
+      height: 22px;
+      color: $color-mone-shaft;
+      transition: .2s $transition-action;
+
+      &:hover {
+        background: $color-jumbo;
+      }
+    }
+  }
 }
 
 @include sticky-footer(320px);
