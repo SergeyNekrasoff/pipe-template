@@ -1,64 +1,97 @@
-.input-field {
-	position: relative;
-  margin: auto;
+.form {
+  @extend %clearfix;
 
-  &_half {
-    @include col(1, 2, $align: middle, $last: true);
-    float: left;
-    z-index: 1;
+  .input-field {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 8px 0;
   }
 
-  &_total {
+  .label {
+    display: inline-block;
+    width: 200px;
+    position: relative;
+    text-align: left;
+
+    .error-text {
+      display: inline-block;
+      color: $color-persimmon;
+      margin-top: 6px;
+      font-size: 11px;
+    }
+
+    .input-placeholder {
+      position: absolute;
+      display: none;
+      top: -4px;
+      left: 7px;
+      padding: 0 7px;
+      height: 12px;
+      background: transparent;
+      color: $color-alto;
+      z-index: 1;
+    }
+
+    .clear-button {
+      display: none;
+      font: $font-reg;
+      font-size: 12px;
+      position: absolute;
+      top: 2px;
+      right: 6px;
+      text-align: center;
+      width: 14px;
+      height: 14px;
+      line-height: 12px;
+      border-radius: 50%;
+      border: 1px solid $color-silver;
+      color: $color-silver;
+      transform: rotate(45deg);
+      cursor: pointer;
+
+      &.flag-active {
+        display: inline-block;
+      }
+    }
+  }
+
+  .input {
+    font: $font-reg;
+    font-size: 14px;
+    color: $color-alto;
+    background: transparent;
+    position: relative;
+    padding: 2px 24px 2px 6px;
     width: 100%;
-    @extend %clearfix;
+    border: 0;
+    border-bottom: 1px solid $color-alto;
+
+    &:focus {
+      .input-placeholder { display: inline-block; }
+      .clear-button { display: block; }
+    }
+
+    &.flag-error {
+      border-color: $color-persimmon;
+    }
+  }
+
+  .label, .btn-subscribe {
+    vertical-align: top;
+  }
+
+  .btn-subscribe {
+    background: $color-alto;
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: 22px;
+    color: $color-mone-shaft;
+    transition: .2s $transition-action;
+
+    &:hover {
+      background: $color-jumbo;
+    }
   }
 }
-
-// .input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-//   color: transparent;
-// }
-// .input::-moz-placeholder { /* Firefox 19+ */
-//   color: transparent;
-// }
-// .input:-ms-input-placeholder { /* IE 10+ */
-//   color: transparent;
-// }
-// .input:-moz-placeholder { /* Firefox 18- */
-//   color: transparent;
-// }
-
-// .input {
-//   background: transparent;
-//   width: 100%;
-//   height: 34px;
-//   line-height: 34px;
-//   padding-left: 10px;
-//   border: 0;
-//   transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
-//   z-index: 1;
-//
-//   &:focus {
-//     background: transparent;
-//     outline: none;
-//   }
-// }
-//
-// .input.flag-filled + label,
-// .input:focus + label {
-//   font-size: 12px;
-//   top: -17px;
-//   z-index: 1;
-// }
-//
-// label {
-//   background: transparent;
-// 	position: absolute;
-// 	left: 8px;
-// 	top: 10px;
-// 	color: $color-silver;
-// 	font-size: 12px;
-// 	display: inline-block;
-// 	padding: 0 8px;
-// 	transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
-//   z-index: -1;
-// }

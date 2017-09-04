@@ -35,10 +35,41 @@
   }
   .brand_sinobi {
     background: url($url-to-img + 'sinobi_logo.png') no-repeat;
+    background-position-y: 3px;
     background-size: contain;
   }
   .brand_amuda {
     background: url($url-to-img + 'amuda_logo.png') no-repeat;
     background-size: contain;
+  }
+
+  // mobile
+  @include respond-to($phone) {
+    &__inner {
+      padding-bottom: 0;
+    }
+
+    &__list {
+      width: 100%;
+
+      li {
+        padding: 0;
+      }
+
+      .brand {
+        height: 55px;
+      }
+    }
+  }
+
+  // tablet-landscape
+  @include respond-to($tablet-portrait) {
+    &__inner {
+      padding: 18px 0 0;
+    }
+
+    &__list {
+      width: 100%;
+    }
   }
 }

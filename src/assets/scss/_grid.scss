@@ -16,6 +16,23 @@
   padding: 0 16px;
 }
 
+.skin,
+.skin-center {
+  min-width: 320px;
+
+  @include respond-to($phone) {
+    width: 100%;
+  }
+
+  @include respond-to($tablet-portrait) {
+    width: 100%;
+  }
+
+  @include respond-to($tablet-landscape) {
+    width: 100%;
+  }
+}
+
 // This is column mixins.
 @mixin col ($col, $sum, $gap: 1em, $align: top, $first: false, $last: false) {
     width: 100%;

@@ -11,7 +11,7 @@
     text-align: center;
     padding: 16px 0;
     width: 30%;
-    vertical-align: middle;
+    vertical-align: top;
 
     &:before {
       content: '';
@@ -38,9 +38,10 @@
       font-size: 13px;
       color: $color-mone-shaft;
       text-transform: uppercase;
-      line-height: 20px;
+      line-height: 1.4;
       letter-spacing: 0.08em;
       display: inline-block;
+      margin-bottom: 4px;
     }
 
     .small_text {
@@ -49,6 +50,30 @@
       font-size: 13px;
       line-height: 1.4;
       color: $color-jumbo;
+    }
+  }
+
+  // mobile
+  @include respond-to($phone) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .item {
+      &:before {
+        top: 65px;
+      }
+
+      .icon-img {
+        height: 44px;
+      }
+
+      .title {
+        font-size: 11px;
+      }
+
+      .small_text {
+        font-size: 10px;
+      }
     }
   }
 }

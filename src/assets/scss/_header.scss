@@ -55,6 +55,67 @@
         }
       }
     }
+
+    // mobile
+    @include respond-to($phone) {
+      &__logo {
+        float: none;
+        text-align: center;
+        margin: 40px 0 0;
+      }
+
+      &__bottom {
+        border-bottom: 1px solid rgba($color-alto, .5);
+      }
+
+      .menu {
+        margin: 12px 0 25px;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+
+        li {
+          margin: 0;
+        }
+
+        .link {
+          font-size: 10px;
+        }
+      }
+    }
+
+    // tablet-portrait
+    @include respond-to($tablet-portrait) {
+      &__logo {
+        float: none;
+        text-align: center;
+        margin-bottom: 0;
+      }
+
+      .menu {
+        margin: 12px 0 25px;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+
+        li {
+          margin: 0;
+        }
+      }
+    }
+
+    // tablet-landscape
+    @include respond-to($tablet-landscape) {
+      .menu {
+        padding: 0;
+      }
+
+      &__bg {
+        .bg-img {
+          transform: translate(-50%);
+        }
+      }
+    }
 }
 
 .menu {

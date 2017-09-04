@@ -24,7 +24,7 @@
   overflow: auto;
   transform: translate(-50%, -50%);
 
-  .popup-wrapper__content {
+  &__content {
   }
 
   .btn-close {
@@ -32,5 +32,16 @@
     top: 20px;
     right: 20px;
     cursor: pointer;
+  }
+
+  // mobile
+  @include respond-to($phone) {
+    min-width: 320px;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    transform: translate(0, 0);
   }
 }

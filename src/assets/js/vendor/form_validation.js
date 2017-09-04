@@ -1,3 +1,6 @@
+// Custom plugins
+require ('./input');
+
 ;(function($) {
     'use strict';
 
@@ -58,8 +61,7 @@
               const $target = $(e.target);
 
               $target.parent().find(this.inputs).val('');
-            });
-
+            })
             this.$form.find(this.submitBtn).on('click', () => this.beforeSubmit());
             this.$form.find(this.inputs).on('keyup', () => this.clearErrors());
             this.$form.find(this.checkbox).on('change', () => this.clearErrors());
@@ -214,7 +216,7 @@
         clearErrors() {
             this.$form.find('.error-text').removeClass('error-active').empty();
             this.$form.find('.flag-error').removeClass('flag-error');
-            // this.$form.find(this.clearInput).addClass('flag-active');
+            this.$form.find(this.clearInput).addClass('flag-active');
             this.setSaveButtonEnabled(true);
         }
 

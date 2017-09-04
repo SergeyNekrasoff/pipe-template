@@ -1,10 +1,10 @@
 extends template/template.pug
 
 block title
-  title Just Rich Watches | Стильные мужские часы
+  title Title
 
 block content
-  body.index-page
+  body.same-page
     .wrapper#wrapper
       .container#container
         include template/_header
@@ -33,15 +33,15 @@ block content
         span.btn-close.js-popup-close
           i.fa.fa-close
         .popup-wrapper__content
-
     .popup.js-popup-overlay.js-popup-box.js-popup-target.display-none(data-rel="popup-2")
       .popup-wrapper
         span.btn-close.js-popup-close
           i.fa.fa-close
         .popup-wrapper__content
 
+
 block footer
   include template/_footer
 
 block script-before-body-end
-  //- script(src="assets/js/index.build.js")
+  //- script(src="assets/js/same.build.js")

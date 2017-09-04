@@ -40,7 +40,18 @@ $(function() {
     speed: 560,
     slidesToShow: 1,
     slidesToScroll: 1,
-		dots: true
+		dots: true,
+		responsive: [
+			{
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+					dots: false,
+					arrows: false
+        }
+      }
+    ]
 	});
 
 });

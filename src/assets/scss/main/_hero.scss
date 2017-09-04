@@ -1,6 +1,5 @@
 .hero {
   position: relative;
-  height: 600px;
   margin: auto 16px;
   overflow: hidden;
 
@@ -199,6 +198,47 @@
       animation-duration: 2.2s;
       animation-timing-function: cubic-bezier(.15,.41,.69,.94);
       animation-iteration-count: infinite;
+    }
+  }
+
+  .swipe-ico {
+    background: url($url-to-img + 'swipe-ico.png') no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 34px;
+    transform: translate(-50%);
+    position: relative;
+    left: 50%;
+  }
+
+  // mobile
+  @include respond-to($phone) {
+    border-bottom: 1px solid rgba($color-alto, .5);
+
+    &__slider {
+      padding: 0;
+    }
+
+    .slick-slide:focus { outline: none; }
+
+    .item {
+      &__descrp {
+        margin-top: 54px;
+      }
+    }
+
+    .tracker {
+      width: 100%;
+    }
+  }
+
+  // tablet-landscape
+  @include respond-to($tablet-portrait) {
+    .bg-img {
+      transform: translate(-50%, 0);
+      height: 100%;
     }
   }
 }

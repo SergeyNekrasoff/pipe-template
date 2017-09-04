@@ -12,6 +12,9 @@
   }
 }
 
+// Use
+// @include background-retina('path-to-normal-img', 'path-to-retina-img');
+
 %clearfix {
   zoom: 1;
 
@@ -30,7 +33,7 @@
 
 
 // Media Query
-$phone : '(max-width: 480px)';
+$phone: '(max-width: 480px)';
 $tablet-portrait: '(max-width: 767px)';
 $tablet-landscape: '(min-width: 768px) and (max-width: 979px)';
 $large-desktop: '(min-width: 1200px)';
@@ -107,6 +110,3 @@ $retina: '(min--moz-device-pixel-ratio: 1.5),
     height: $footer-height;
   }
 }
-
-// Use
-// @include sticky-footer(50px);

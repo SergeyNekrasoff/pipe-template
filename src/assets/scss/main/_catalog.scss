@@ -92,4 +92,33 @@
     margin: 42px auto 0;
     transition: .5s $transition-action;
   }
+
+  // mobile
+  @include respond-to($phone) {
+    padding: 50px 0;
+
+    &__inner {
+      width: 100%;
+    }
+
+    &__item {
+      width: 100%;
+      margin-top: -1px;
+
+      &:first-child() {
+        border-right: 1px solid $color-mone-shaft;
+      }
+
+      &:last-child {
+        border-left: 1px solid $color-mone-shaft;
+      }
+    }
+  }
+
+  // tablet-landscape
+  @include respond-to($tablet-portrait) {
+    &__inner {
+      width: 100%;
+    }
+  }
 }

@@ -1,10 +1,10 @@
 {
-  "name": "pipe-template",
-  "version": "0.1.1",
+  "name": "clean-repo",
+  "version": "0.1.0",
   "description": "Boilerplate",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SergeyNekrasoff/pipe-template"
+    "url": "https://github.com/SergeyNekrasoff/clean-repo"
   },
   "scripts": {
     "start": "gulp",

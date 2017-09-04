@@ -36,8 +36,6 @@ Curtain.prototype = {
 
         if (element.hasClass('flag-closed')) {
             this.showCurtain(element);
-        } else if (element.data('rel') === 'header-brand') {
-            window.location.href = element.attr('href');
         } else {
             this.hideCurtain(element);
         }
