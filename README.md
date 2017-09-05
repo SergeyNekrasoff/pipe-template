@@ -1,4 +1,4 @@
-# Clean Project (PUG-SCSS-BABEL)
+# Pipe-Template (PUG-SCSS-ES6)
 
 ### 1.Installation
 ```
