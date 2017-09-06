@@ -5,7 +5,7 @@
 
         $this.hide();
         jQuery(parent).hover(
-            function(){
+            function() {
                 $this.show();
             },
             function() {

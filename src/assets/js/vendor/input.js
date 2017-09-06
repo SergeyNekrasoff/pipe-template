@@ -47,7 +47,6 @@
 
     $(document)
         .on('focus', cssSelector.input, (e) => {
-          console.log('input input input');
             $(e.currentTarget).removeClass('flag-error');
             $(e.currentTarget).parent().removeClass('field-error show-asterisk');
         })

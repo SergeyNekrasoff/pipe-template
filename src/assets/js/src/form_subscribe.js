@@ -108,7 +108,7 @@
     }
 
     $(() => {
-        new SubmitCutomerEmail($('.js-form-subscribe'));
+        new SubmitCutomerEmail($('.js-form'));
     });
 
 })(jQuery);

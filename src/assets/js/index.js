@@ -1,5 +1,5 @@
 // Custom plugins
-require ('./vendor/form_validation');
+require ('./vendor/formValidation');
 
 // Includes
 require ('./src/form_subscribe');
