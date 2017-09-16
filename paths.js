@@ -13,7 +13,7 @@ export default {
 		templates: './src',
 		html: 'src/*.pug',
 		js: ['src/assets/js/**.js'],
-		style: 'src/assets/scss/style.scss',
+		style: 'src/assets/scss/*.scss',
 		img: 'src/assets/img/**/*.*',
 		fonts: 'src/assets/fonts/**/*.*',
 		sprites: 'src/assets/img/sprites/*.png',

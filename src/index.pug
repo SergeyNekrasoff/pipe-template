@@ -3,6 +3,9 @@ extends template/template.pug
 block title
   title
 
+block css
+  link(rel="stylesheet", href="assets/css/main.css")
+    
 block content
   body.index-page
     .wrapper#wrapper
@@ -33,13 +36,13 @@ block content
           .skin.skin-center
             .block__inner
               .block__item
-                img(src="http://lorempixel.com/400/200/sports" alt="picture")
+                img(src="#" alt="picture")
               .block__item
-                img(src="http://lorempixel.com/400/200/sports" alt="picture")
+                img(src="#" alt="picture")
               .block__item
-                img(src="http://lorempixel.com/400/200/sports" alt="picture")
+                img(src="#" alt="picture")
               .block__item
-                img(src="http://lorempixel.com/400/200/sports" alt="picture")
+                img(src="#" alt="picture")
 
     .popup.js-popup-overlay.js-popup-box.js-popup-target.display-none(data-rel="popup-1")
       .popup-wrapper
