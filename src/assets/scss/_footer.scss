@@ -1,7 +1,6 @@
 .footer {
   background: $color-mone-shaft;
   position: relative;
-  font-size: 14px;
   color: $color-alto;
 
   &__col {
@@ -13,6 +12,7 @@
 
   &__bottom {
     @extend %clearfix;
+    font-size: 14px;
   }
 
   // mobile
