@@ -18,7 +18,9 @@
 
 .skin,
 .skin-center {
-  min-width: 320px;
+  min-width: 20rem;
+  max-width: 74rem;
+  width: 100%;
 
   @include respond-to($phone) {
     width: 100%;

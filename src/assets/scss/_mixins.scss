@@ -110,3 +110,12 @@ $retina: '(min--moz-device-pixel-ratio: 1.5),
     height: $footer-height;
   }
 }
+
+// Update 16.11.17
+@mixin truncate($width: 300px) {
+  max-width: $width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}

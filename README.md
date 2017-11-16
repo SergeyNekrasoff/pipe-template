@@ -4,7 +4,6 @@
 ```
 yarn install
 
-bower install
 ```
 
 

@@ -1,3 +1,56 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+ul, ol, li, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+input, textarea, button, a {
+  border: 0;
+  outline: none;
+}
+
+body {
+  background: rgba(255, 255, 255, .9);
+  font-family: 'Roboto', 'PT Sans', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: $color-mine-shaft;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 1px;
+  background: #c4c4c4;
+}
+
+::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #777;
+
+  &:hover {
+    background: #777;
+  }
+}
+
 .wrapper {
   min-height: 100%;
 }
@@ -34,26 +87,18 @@ img {
 }
 
 // GUI
-.reg-text {
-  font: $font-reg;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 1.5;
-}
-
 .btn {
-    box-shadow: none;
-    outline: none;
-    background-color: transparent;
-    border: 0;
-    border-radius: 0;
-    display: inline-block;
-    padding: 0;
-    position: relative;
-    text-transform: uppercase;
-    text-align: center;
-    transition: .35s $transition-action;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  outline: none;
+  border-radius: 0;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  transition: .35s $transition-action;
 }
 
 .overlay {
@@ -63,136 +108,12 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, .8);
+  background: rgba(0, 0, 0, .6);
   z-index: 2;
-
-  &.flag-active {
-    display: block;
-  }
-}
-
-.subscribe {
-  @extend %clearfix;
-
-  .input-field {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    margin: 8px 0;
-  }
-
-  .label {
-    display: inline-block;
-    width: 200px;
-    position: relative;
-    text-align: left;
-
-    .error-text {
-      display: inline-block;
-      color: $color-persimmon;
-      margin-top: 6px;
-      font-size: 11px;
-    }
-
-    .input-placeholder {
-      position: absolute;
-      display: none;
-      top: -4px;
-      left: 7px;
-      padding: 0 7px;
-      height: 12px;
-      background: transparent;
-      color: $color-alto;
-      z-index: 1;
-    }
-
-    .clear-button {
-      display: none;
-      font: $font-reg;
-      font-size: 12px;
-      position: absolute;
-      top: 2px;
-      right: 6px;
-      text-align: center;
-      width: 14px;
-      height: 14px;
-      line-height: 12px;
-      border-radius: 50%;
-      border: 1px solid $color-silver;
-      color: $color-silver;
-      transform: rotate(45deg);
-      cursor: pointer;
-
-      &.flag-active {
-        display: inline-block;
-      }
-    }
-  }
-
-  .input {
-    font: $font-reg;
-    font-size: 14px;
-    color: $color-alto;
-    background: transparent;
-    position: relative;
-    padding: 2px 24px 2px 6px;
-    width: 100%;
-    border: 0;
-    border-bottom: 1px solid $color-alto;
-
-    &:focus {
-      .input-placeholder { display: inline-block; }
-      .clear-button { display: block; }
-    }
-
-    &.flag-error {
-      border-color: $color-persimmon;
-    }
-  }
-
-  .label, .btn-subscribe {
-    vertical-align: top;
-  }
-
-  .btn-subscribe {
-    background: $color-alto;
-    display: inline-block;
-    position: relative;
-    width: auto;
-    height: 22px;
-    color: $color-mone-shaft;
-    transition: .2s $transition-action;
-
-    &:hover {
-      background: $color-jumbo;
-    }
-  }
 }
 
 @keyframes scroll {
   0% { opacity: 0; }
   10% { transform: translateY(0); opacity: 1; }
   100% { transform: translateY(5px); opacity: 0;}
-}
-
-// Hidden elements
-.hidden-s {
-  @include respond-to($phone) {
-    display: none;
-  }
-}
-
-.hidden-m {
-  @include respond-to($tablet-portrait) {
-    display: none;
-  }
-  @include respond-to($tablet-landscape) {
-    display: none;
-  }
-}
-
-.hidden-l {
-  @include respond-to($large-desktop) {
-    display: none;
-  }
 }

@@ -13,7 +13,7 @@ let plugins = [
     new webpack.optimize.DedupePlugin(),
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ru/),
     new webpack.ResolverPlugin(
-        new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin(".bower.json", ["main"])
+        new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin(["main"])
     ),
     new CopyWebpackPlugin([
       { context: PATHS.app, from: 'separate', to: 'separate' }
@@ -35,8 +35,7 @@ const config = {
             {
                 test: /\.jsx?$/,
                 exclude: [
-                    /node_modules/,
-                    /bower_components/
+                    /node_modules/
                 ],
                 include: PATHS.app,
                 loader: 'babel-loader',
@@ -58,7 +57,7 @@ const config = {
 	},
     resolve:  {
         extensions: ['', '.js', '.jsx'],
-        modulesDirectories: ['node_modules', 'bower_components']
+        modulesDirectories: ['node_modules']
     },
     plugins: plugins
 };

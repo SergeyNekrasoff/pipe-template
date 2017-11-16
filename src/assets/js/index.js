@@ -2,4 +2,4 @@
 require ('./vendor/formValidation');
 
 // Includes
-require ('./src/form_subscribe');
+require ('./src/formTemplate');

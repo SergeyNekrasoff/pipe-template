@@ -3,12 +3,11 @@
 @import '../../../node_modules/slick-carousel/slick/slick-theme.scss';
 
 // Common
-@import "_mixins";
 @import "_vars";
-@import "_grid";
 @import "_fonts";
-@import "_main";
+@import "_mixins";
 @import "_common";
+@import "_grid";
 @import "_form";
 @import "_popup";
 @import "_header";

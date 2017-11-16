@@ -4,7 +4,7 @@
     /**
      *  Get in touch form settings
      */
-    class SubmitCutomerEmail extends FormValidation {
+    class Registration extends FormValidation {
 
         /**
          *  Form initialize
@@ -17,8 +17,7 @@
                 fullMessages: false
             };
 
-            this.$successMessage = $('.js-form-subscribe');
-
+            this.$successMessage = $('.js-form-registration');
             this.$form.find(this.inputs).on('focus', () => this.clearErrors());
         }
 
@@ -28,6 +27,18 @@
          */
         getConstraints() {
             return {
+                'firstname': {
+                    presence: {
+                        message: 'Please enter your firstname'
+                    }
+                },
+
+                'lastname': {
+                    presence: {
+                        message: 'Please enter your lastname'
+                    }
+                },
+
                 'email': {
                     presence: {
                         message: 'Please enter your email'
@@ -35,6 +46,12 @@
 
                     email: {
                         message: 'Please enter correct email'
+                    }
+                },
+
+                'password': {
+                    presence: {
+                        message: 'Please enter your password'
                     }
                 }
             };
@@ -88,7 +105,7 @@
         }
 
         /**
-         * Send customer email from blog
+         * Send form
          *
          * @param {object} data
          * @returns {Promise}
@@ -108,7 +125,8 @@
     }
 
     $(() => {
-        new SubmitCutomerEmail($('.js-form'));
+        new Registration($('.js-form-registration'));
+        // new Registration($('.js-form-registration'));
     });
 
 })(jQuery);

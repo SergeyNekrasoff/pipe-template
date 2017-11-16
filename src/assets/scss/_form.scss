@@ -1,11 +1,65 @@
-.form {
+.form-default {
   @extend %clearfix;
+
+  .form-default {
+
+    &__group {
+      &--justify {
+        justify-content: space-between;
+        padding: 0;
+        margin-bottom: 15px;
+      }
+
+      &--nopadding {
+        margin: 0;
+      }
+    }
+  }
 
   .input-field {
     display: inline-block;
     width: 100%;
-    text-align: center;
-    margin: 8px 0;
+
+    &.input-field-full {
+      width: 100%;
+    }
+
+    &.input-field-65 {
+      width: 65%;
+    }
+
+    &.input-field-30 {
+      width: 30%;
+    }
+
+    &.input-field-45 {
+      width: 45%;
+    }
+
+    &.input-field-15 {
+      width: 15%;
+    }
+
+    &.field-error {
+      border-color: $color-persimmon;
+    }
+  }
+
+  .input {
+    color: $color-mine-shaft;
+
+    &:focus {
+      .input-placeholder {
+        display: inline-block;
+      }
+      .clear-button {
+        display: block;
+      }
+    }
+
+    &.flag-error {
+      border-color: $color-persimmon;
+    }
   }
 
   .label {
@@ -56,42 +110,48 @@
     }
   }
 
-  .input {
-    font: $font-reg;
+  .input-file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .input-file + .label-file {
+    letter-spacing: -1px;
+    white-space: nowrap;
+    word-spacing: 3px;
+    height: 60px;
     font-size: 14px;
-    color: $color-alto;
-    background: transparent;
-    position: relative;
-    padding: 2px 24px 2px 6px;
-    width: 100%;
-    border: 0;
-    border-bottom: 1px solid $color-alto;
-
-    &:focus {
-      .input-placeholder { display: inline-block; }
-      .clear-button { display: block; }
-    }
-
-    &.flag-error {
-      border-color: $color-persimmon;
-    }
-  }
-
-  .label, .btn-subscribe {
-    vertical-align: top;
-  }
-
-  .btn-subscribe {
-    background: $color-alto;
+    line-height: 60px;
+    vertical-align: middle;
     display: inline-block;
-    position: relative;
-    width: auto;
-    height: 22px;
-    color: $color-mone-shaft;
-    transition: .2s $transition-action;
+    width: 100%;
+    text-align: center;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color .2s $transition-action;
 
     &:hover {
-      background: $color-jumbo;
+      background-color: #eee;
+    }
+  }
+
+  .input-file:focus + label,
+  .input-file + label:hover {
+      background-color: tomato;
+  }
+
+  .error-text {
+    display: none;
+    color: $color-persimmon;
+    margin-top: 4px;
+    font-size: 10px;
+
+    &.error-active {
+      display: inline-block;
     }
   }
 }
