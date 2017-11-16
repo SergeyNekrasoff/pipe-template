@@ -8,10 +8,10 @@ require('slick-carousel');
 require ('./vendor/smoothScroll');
 require ('./vendor/sticky');
 // Optional
-// require ('./vendor/scrollTo');
-// require ('./vendor/expand');
-// require ('./vendor/tooltip');
-// require ('./vendor/popup');
+require ('./vendor/scrollTo');
+require ('./vendor/expand');
+require ('./vendor/tooltip');
+require ('./vendor/popup');
 
 // Includes
 require ('./src/app');

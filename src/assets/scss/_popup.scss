@@ -1,4 +1,5 @@
 .popup {
+  display: none;
   background: rgba($color-mine-shaft, 0.95);
   position: fixed;
   top: 0;
@@ -8,9 +9,6 @@
   overflow: hidden;
   z-index: 100;
 
-  &.display-none {
-    display: none;
-  }
 }
 
 .popup-wrapper {
