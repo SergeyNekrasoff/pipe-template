@@ -1,3 +1,6 @@
+window.$ = window.jQuery = require('jquery');
+import $ from 'jQuery'
+
 ;(function($) {
     /**
      * Plugin to expand element
