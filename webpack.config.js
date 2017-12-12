@@ -8,16 +8,20 @@ const PATHS = {
 };
 
 let plugins = [
-    new webpack.NoErrorsPlugin(),
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ru/),
-    new webpack.ResolverPlugin(
-        new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin(["main"])
-    ),
-    new CopyWebpackPlugin([
-      { context: PATHS.app, from: 'separate', to: 'separate' }
-    ])
+    // new webpack.NoErrorsPlugin(),
+    // new webpack.optimize.OccurenceOrderPlugin(),
+    // new webpack.optimize.DedupePlugin(),
+    // new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ru/),
+    // new webpack.ResolverPlugin(
+    //     new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin(["main"])
+    // ),
+    // new CopyWebpackPlugin([
+    //   { context: PATHS.app, from: 'separate', to: 'separate', from: 'vendor', to: 'vendor' }
+    // ]),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    })
 ];
 
 if (IS_PRODUCTION) {
@@ -33,7 +37,7 @@ const config = {
     module: {
         loaders: [
             {
-                test: /\.jsx?$/,
+                test: /\.js$/,
                 exclude: [
                     /node_modules/
                 ],

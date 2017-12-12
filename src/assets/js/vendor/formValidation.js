@@ -1,6 +1,3 @@
-// Custom plugins
-require ('./input');
-
 ;(function($) {
     'use strict';
 
