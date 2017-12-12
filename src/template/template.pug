@@ -37,11 +37,12 @@ html(lang="ru")
         link(sizes="180x180" href="./resources.apple-touch-icon-180x180.png" rel="apple-touch-icon")
         link(sizes="16x16" href="./resources.apple-touch-icon-16x16.png" rel="apple-touch-icon")
         link(sizes="32x32" href="./resources.apple-touch-icon-32x32.png" rel="apple-touch-icon")
-
         link(rel="manifest" href="./resources/manifest.json")
+          
+        script(src="assets/js/general.build.js")
 
         block title
-            title Default Name
+          title Default Name
 
         block css
         block script-before-head-end
@@ -58,5 +59,4 @@ html(lang="ru")
         .overlay.js-overlay
         block content
         block footer
-        script(src="assets/js/main.build.js")
         block script-before-body-end

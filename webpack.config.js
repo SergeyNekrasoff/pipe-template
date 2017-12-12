@@ -9,12 +9,8 @@ const PATHS = {
 
 let plugins = [
     new CopyWebpackPlugin([
-      { context: PATHS.app, from: 'separate', to: 'separate', from: 'vendor', to: 'vendor' }
-    ]),
-    new webpack.ProvidePlugin({
-      jQuery: 'jquery',
-      $: 'jquery',
-    })
+      { context: PATHS.app, from: 'separate', to: 'separate' }
+    ])
 ];
 
 if (IS_PRODUCTION) {
@@ -56,10 +52,7 @@ const config = {
       extensions: ['', '.js'],
       modulesDirectories: ['node_modules']
   },
-  plugins: plugins,
-  externals: {
-    jQuery: 'jQuery'
-  }
+  plugins: plugins
 };
 
 export default config;

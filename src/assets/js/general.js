@@ -1,3 +1,14 @@
+window.$ = window.jQuery = require('jquery');
+
+// Plugins
+require('slick-carousel');
+
+// Vendors
+require ('./vendor/expand');
+require ('./vendor/popup');
+require ('./vendor/sticky');
+
+// Init
 const initKit = (greeting) => {
   return greeting;
 };

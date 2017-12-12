@@ -126,7 +126,6 @@
 
     $(() => {
         new Registration($('.js-form-registration'));
-        // new Registration($('.js-form-registration'));
     });
 
 })(jQuery);
