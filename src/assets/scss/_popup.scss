@@ -9,20 +9,28 @@
   overflow: hidden;
   z-index: 100;
 
+  &__title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.125rem;
+    letter-spacing: .225rem;
+    margin: 0 0 40px;
+  }
 }
 
 .popup-wrapper {
   position: absolute;;
   top: 50%;
   left: 50%;
-  width: 600px;
-  height: 600px;
+  max-width: 600px;
+  max-height: 85vh;
   background: $color-white;
   padding: 20px;
   overflow: auto;
   transform: translate(-50%, -50%);
 
   &__content {
+    height: 100%;
+    margin-top: 40px;
   }
 
   .btn-close {
@@ -30,6 +38,7 @@
     top: 20px;
     right: 20px;
     cursor: pointer;
+    z-index: 1;
   }
 
   // mobile

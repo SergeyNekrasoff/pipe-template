@@ -4,7 +4,7 @@
     /**
      *  Get in touch form settings
      */
-    class Registration extends FormValidation {
+    class Subscribe extends FormValidation {
 
         /**
          *  Form initialize
@@ -17,7 +17,6 @@
                 fullMessages: false
             };
 
-            this.$successMessage = $('.js-form-registration');
             this.$form.find(this.inputs).on('focus', () => this.clearErrors());
         }
 
@@ -27,31 +26,13 @@
          */
         getConstraints() {
             return {
-                'firstname': {
+                'subscriber': {
                     presence: {
-                        message: 'Please enter your firstname'
-                    }
-                },
-
-                'lastname': {
-                    presence: {
-                        message: 'Please enter your lastname'
-                    }
-                },
-
-                'email': {
-                    presence: {
-                        message: 'Please enter your email'
+                        message: 'Пожалуйста, введите e-mail'
                     },
 
                     email: {
-                        message: 'Please enter correct email'
-                    }
-                },
-
-                'password': {
-                    presence: {
-                        message: 'Please enter your password'
+                        message: 'Введите корректный e-mail'
                     }
                 }
             };
@@ -91,28 +72,17 @@
          * @returns {promise}
          */
         _sendAjax(data) {
-            // return submitEmailFromBlogPage(data)
-            //     .done((response) => {
-            //         if (response.message) {
-            //             this.$successMessage.text(response.message);
-            //         }
-            //     })
-            //     .fail((response) => this._showErrorForm(response.responseJSON.message))
-            //     .always(() => this.setSaveButtonEnabled(true));
+          window.Loader.show();
 
-            alert('success!')
-            console.log('data form-subscribe: ' + data);
+          $.ajax({
+            url: '/scripts/mail.php',
+            type: 'POST',
+            data: data,
+            dataType: 'json'
+          }).always(() => {
+            window.Loader.hide()
+          });
         }
-
-        /**
-         * Send form
-         *
-         * @param {object} data
-         * @returns {Promise}
-         */
-        // submitEmailFromBlogPage(data) {
-        //     return $.post('/path-to-method/postHowVisionBenefit', data);
-        // }
 
         /**
          * Show message from controller
@@ -125,7 +95,7 @@
     }
 
     $(() => {
-        new Registration($('.js-form-registration'));
+        new Subscribe($('.js-form-subscribe'));
     });
 
 })(jQuery);

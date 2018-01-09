@@ -1,6 +1,5 @@
 // Custom plugins
 require ('./vendor/formValidation');
+require ('./vendor/slickSettings');
 
 // Includes
-require ('./pages/main/formReg');
-require ('./pages/main/slickSettings');

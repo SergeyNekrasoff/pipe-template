@@ -65,6 +65,6 @@
 
     $(document)
         .on('click.popup', '.js-popup-trigger', showPopup)
-        .on('click.popup', '.js-popup-close, .js-popup-overlay', hidePopup);
+        .on('click.popup', '.js-popup-close', hidePopup);
 
 })(jQuery);

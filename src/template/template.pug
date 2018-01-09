@@ -4,7 +4,7 @@ html(lang="ru")
         meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0")
         meta(http-equiv="Content-type" content="text/html; charset=utf-8")
         meta(http-equiv="X-UA-Compatible" content="IE=Edge")
-        meta(name="robots" content="noindex")
+        meta(name="robots" content="noindex, nofollow")
         meta(name="mobile-web-app-capable" content="yes")
         meta(name="imagetoolbar" content="no")
         meta(name="HandheldFriendly" content="True")
@@ -20,7 +20,7 @@ html(lang="ru")
         meta(name="keywords" content="")
         meta(name="author" content="")
         meta(name="copyright" content="(c)")
-        meta(http-equiv="Reply-to" content="justrichwatches@yandex.ru")
+        meta(http-equiv="Reply-to" content="@yandex.ru")
 
         link(rel="icon" href="./resources/favicon.ico")
         link(sizes="57x57" href="./resources.apple-touch-icon-57x57.png" rel="apple-touch-icon")
@@ -39,8 +39,11 @@ html(lang="ru")
         link(sizes="32x32" href="./resources.apple-touch-icon-32x32.png" rel="apple-touch-icon")
         link(rel="manifest" href="./resources/manifest.json")
           
+        //- Material Source
+        link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        
         script(src="assets/js/general.build.js")
-
+            
         block title
           title Default Name
 
@@ -57,6 +60,8 @@ html(lang="ru")
 
     body
         .overlay.js-overlay
+        .loader.js-loader
+          .loader__spinner
         block content
         block footer
         block script-before-body-end

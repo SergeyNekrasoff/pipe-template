@@ -1,155 +1,89 @@
 .header {
+  padding: 20px;
 
-    &__inner {
-      font: $font-reg;
-      color: $color-alto;
+  &--primary {
+    display: flex;
+    background-color: transparent;
+    z-index: 2;
+  }
+
+  .btn-menu {
+    color: $color-mine-shaft;
+  }
+
+  &__inner {
+    padding: 0 36px;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    .logo-text,
+    .logo-subtext {
+      font-family: 'Roboto';
+      font-size: 1.425rem;
+      letter-spacing: .225rem;
+      line-height: 1;
+      font-weight: 700;
+      color: $color-mine-shaft;
     }
 
-    &__top {
-      background: $color-mirage;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      text-align: center;
-      padding: 10px 0;
-      z-index: 1;
-
-      .small_text {
-        color: $color-alto;
-      }
-
-      .pr-code {
-        font: $font-bold;
-        font-size: 10px;
-        color: $color-white;
-        cursor: pointer;
-      }
-
-      .i-plus {
-        display: inline-block;
-        margin-left: 5px;
-        font-size: 14px;
-        vertical-align: middle;
-      }
+    .logo-subtext {
+      display: block;
+      font-size: .625rem;
+      letter-spacing: .4rem;
+      font-weight: 400;
     }
-
-    &__bottom {
-      @extend %clearfix;
-      margin-top: 37px;
-    }
-
-    &__logo {
-      float: left;
-      margin: 25px 0;
-
-      .link-logo {
-        display: inline-block;
-        width: 200px;
-        height: 80px;
-
-        .img-logo {
-          max-width: 100%;
-          width: 100%;
-          height: auto;
-        }
-      }
-    }
-
-    // mobile
-    @include respond-to($phone) {
-      &__logo {
-        float: none;
-        text-align: center;
-        margin: 40px 0 0;
-      }
-
-      &__bottom {
-        border-bottom: 1px solid rgba($color-alto, .5);
-      }
-
-      .menu {
-        margin: 12px 0 25px;
-        padding: 0;
-        width: 100%;
-        text-align: center;
-
-        li {
-          margin: 0;
-        }
-
-        .link {
-          font-size: 10px;
-        }
-      }
-    }
-
-    // tablet-portrait
-    @include respond-to($tablet-portrait) {
-      &__logo {
-        float: none;
-        text-align: center;
-        margin-bottom: 0;
-      }
-
-      .menu {
-        margin: 12px 0 25px;
-        padding: 0;
-        width: 100%;
-        text-align: center;
-
-        li {
-          margin: 0;
-        }
-      }
-    }
-
-    // tablet-landscape
-    @include respond-to($tablet-landscape) {
-      .menu {
-        padding: 0;
-      }
-
-      &__bg {
-        .bg-img {
-          transform: translate(-50%);
-        }
-      }
-    }
-}
-
-.menu {
-  float: right;
-  margin-top: 50px;
+  }
 
   &__nav {
   }
 
-  &.flag-active {
-    display: block;
+  // mobile
+  @include respond-to($phone) {
   }
+}
 
-  li {
-    display: inline-block;
-    margin: 0 20px;
-    padding: 8px;
-    vertical-align: middle;
+.drop-menu {
+  position: relative;
 
-    &:last-child {
-      margin-right: 0;
+  .top-nav {
+    padding-top: 40px;
+
+    &__title {
+      font-family: 'MullerMedium', 'PT Sans', Helvetica, Arial, sans-serif;;
+      font-size: .8125rem;
+      letter-spacing: .3rem;
+      margin: 0 0 37px 40px;
     }
-  }
 
-  .link {
-    font: $font-bold;
-    font-size: 14px;
-    letter-spacing: 1px;
-    color: $color-abbey;
-    text-transform: uppercase;
-    transition: .2s $transition-action;
+    li {
+      padding: 0 0 0 40px;
+      position: relative;
+      height: 30px;
+      line-height: 30px;
+      margin: 0 0 5px;
 
-    &:hover {
-      color: $color-mine-shaft;
+      &:first-child {
+        margin: 0 0 30px;
+      }
+    }
+
+    .link {
+      font-size: .625rem;
+      letter-spacing: .2rem;
+      color: $color-silver;
+      margin: 0 0 0 40px;
+      padding: 0;
+
+      &:hover {
+        color: $color-white;
+      }
+
+      &--email {
+        font-family: 'MullerMedium', 'PT Sans', Helvetica, Arial, sans-serif;;
+        color: $color-gallery;
+      }
     }
   }
 }

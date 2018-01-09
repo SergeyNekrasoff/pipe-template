@@ -1,15 +1,24 @@
-header.header#header
-  .header__top
-
-  .skin.skin-center
-    .header__inner
-      .header__bottom
-        .header__logo
-          a.link.link-logo(href="./")
-            img.img-logo(src="../assets/img/logo2.png", alt="alt")
-        menu.menu
-          nav.menu__nav(role="menu")
-            li: a.link.js-popup-trigger(href="#" data-rel="popup-1") popup-1
-            li: a.link.js-popup-trigger(href="#" data-rel="popup-2") popup-2
-            li: a.link(href="/") Доставка
-            li: a.link(href="/") отзывы
+header.header.header--primary.mdl-layout__header.mdl-layout__header--waterfall
+  .mdl-layout__header-row.header__inner
+    .header__btn.mdl-cell--hide-desktop.mdl-cell--order-2-phone.mdl-cell--order-2-tablet
+      button.btn-menu.mdl-button.mdl-js-button.mdl-button--icon(id="burger-menu")
+        i.material-icons subject
+    .header__logo
+      a.link(href="/" alt="Logo-brand")
+        span.logo-text.mdl-typography--text-uppercase Logo
+        span.logo-subtext.mdl-typography--text-uppercase Company
+      
+    .header__nav
+      nav.mdl-navigation.mdl-cell--hide-phone.mdl-cell--hide-tablet
+        a.link.link--menu.mdl-typography--text-uppercase(href="#") Link
+        a.link.link--menu.mdl-typography--text-uppercase(href="#") Link
+        a.link.link--menu.mdl-typography--text-uppercase(href="#") Link
+        a.link.link--last.link--menu.mdl-typography--text-uppercase(href="#") Link
+  
+  //- .drop-menu.mdl-menu.mdl-js-menu.mdl-menu--bottom-right.mdl-js-ripple-effect(for="burger-menu")
+  //-   .wrapper-cell
+  //-     ul.burger-menu__list.cell-inside
+  //-       li: a.link--menu.mdl-navigation__link.mdl-typography--text-uppercase(href="#") Link
+  //-       li: a.link--menu.mdl-navigation__link.mdl-typography--text-uppercase(href="#") Link
+  //-       li: a.link--menu.mdl-navigation__link.mdl-typography--text-uppercase(href="#") Link
+  //-       li: a.link.link--menu.mdl-navigation__link.mdl-typography--text-uppercase(href="#") Link
