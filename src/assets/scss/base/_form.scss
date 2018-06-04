@@ -1,0 +1,137 @@
+.form-default {
+  @extend %clearfix;
+
+  &__group {
+    margin-bottom: 35px;
+  }
+
+  &__label {
+    font-weight: normal;
+    margin-bottom: 9px;
+  }
+
+  .input-field {
+    display: inline-block;
+    width: 200px;
+
+    .error-text {
+      display: inline-block;
+      color: tomato;
+      margin-top: 4px;
+      font-size: 12px;
+    }
+
+    &--full {
+      width: 100%;
+    }
+  }
+
+  .input {
+    border: 1px solid black;
+    color: $color-mine-shaft;
+    height: 40px;
+    border-radius: 2px;
+    font-size: 14px;
+    line-height: 16px;
+    padding-left: 20px;
+
+    &:focus {
+      .input-placeholder {
+        display: inline-block;
+      }
+
+      .clear-button {
+        display: block;
+      }
+    }
+
+    &.flag-error {
+      border-color: tomato;
+    }
+
+    &:hover {
+      border-color: lime;
+    }
+  }
+}
+
+.input-select {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: blue;
+
+  padding: 4px 30px 3px 8px;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  color: transparent;
+  text-shadow: 0 0 0 gray;
+
+  &:hover {
+    background: gray;
+  }
+}
+
+// getmdl-select
+// .getmdl-select {
+//   cursor: pointer;
+//
+//   .material-icons {
+//     min-width: 7px;
+//     width: 7px;
+//     height: 4px;
+//     font-size: 14px;
+//     position: absolute;
+//     top: 18px;
+//     right: 12px;
+//     z-index: 10;
+//   }
+//
+//   &__label {
+//     font-family: $reg;
+//     font-size: 12px;
+//     line-height: 14px;
+//     color: $color-boulder;
+//     margin-bottom: 6px;
+//   }
+// }
+
+.label {
+  display: inline-block;
+  width: 200px;
+  position: relative;
+  text-align: left;
+
+  .input-placeholder {
+    position: absolute;
+    display: none;
+    top: -4px;
+    left: 7px;
+    padding: 0 7px;
+    height: 12px;
+    background: transparent;
+    color: $color-jumbo;
+    z-index: 1;
+  }
+
+  .clear-button {
+    display: none;
+    font-size: 12px;
+    position: absolute;
+    top: 2px;
+    right: 6px;
+    text-align: center;
+    width: 14px;
+    height: 14px;
+    line-height: 12px;
+    border-radius: 50%;
+    border: 1px solid $color-jumbo;
+    color: $color-jumbo;
+    transform: rotate(45deg);
+    cursor: pointer;
+
+    &.flag-active {
+      display: inline-block;
+    }
+  }
+}

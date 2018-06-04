@@ -2,12 +2,12 @@ window.$ = window.jQuery = require('jquery');
 
 // Plugins
 require('slick-carousel');
+require('./vendor/slickSettings');
 
 // Vendors
 require ('./vendor/loader');
 require ('./vendor/expand');
 require ('./vendor/popup');
-require ('./vendor/sticky');
 require ('./vendor/formValidation');
 
 require ('./pages/subscribe');

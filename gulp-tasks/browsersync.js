@@ -9,7 +9,7 @@ gulp.task('browserSync', () => {
 		},
 		host: 'localhost',
 		port: 3000,
-		logPrefix: 'frontend',
+		logPrefix: 'pipe-frontend',
 		open: false,
 		files: [
 			'build/assets/css/*.css',

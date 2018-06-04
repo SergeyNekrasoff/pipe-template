@@ -30,7 +30,7 @@ const PROCESSORS = [
 		retina: true,
 		outputDimensions: true,
 		padding: 4,
-		filterBy: (image) => /sprites\/.*\.png$/gi.test(image.url)
+		filterBy: image => /sprites\/.*\.png$/gi.test(image.url)
 	})
 ];
 

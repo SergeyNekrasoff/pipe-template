@@ -32,17 +32,22 @@ block content
                     img(src="http://lorempixel.com/400/200/nature" alt="slide picture")
 
     .popup.js-popup-overlay.js-popup-box.js-popup-target(data-rel="popup-1")
-      .popup-wrapper
+      .popup-inside
         span.js-popup-close close
-        .popup-wrapper__content
+        .popup-inside__title
+          title
+        .popup-inside__content
+          content
 
     .popup.js-popup-overlay.js-popup-box.js-popup-target(data-rel="popup-2")
-      .popup-wrapper
+      .popup-inside
         span.js-popup-close close
-        .popup-wrapper__content
+        .popup-inside__title
+          title
+        .popup-inside__content
+          content
 
 block footer
   include template/_footer
 
-block script-before-body-end
-  script(src="assets/js/index.build.js")
+block append script-before-body-end
